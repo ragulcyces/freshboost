@@ -1,0 +1,1691 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Freshboost · Brand & Site Doc v2</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600;9..144,700&family=Inter+Tight:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg-ink: #0E0B1A;
+    --bg-deep: #1A1430;
+    --bg-paper: #FAFAF7;
+    --bg-paper-warm: #F4F1EA;
+    --ink: #0E0B1A;
+    --ink-soft: #4A4458;
+    --ink-mute: #8B869B;
+    --line: #E5E2D8;
+    --line-dark: #2A2540;
+    --purple: #6B4FE8;
+    --purple-deep: #4A2FCC;
+    --purple-soft: #B8A8FF;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Inter Tight', system-ui, sans-serif;
+    background: var(--bg-paper);
+    color: var(--ink);
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  /* DOC INTRO */
+  .doc-intro {
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 80px 40px 60px;
+    border-bottom: 1px solid var(--line);
+  }
+  .doc-intro .eyebrow {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink-mute);
+    margin-bottom: 24px;
+  }
+  .doc-intro h1 {
+    font-family: 'Fraunces', serif;
+    font-weight: 400;
+    font-size: 56px;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    margin-bottom: 24px;
+  }
+  .doc-intro h1 em {
+    font-style: italic;
+    color: var(--purple);
+  }
+  .doc-intro .lede {
+    font-size: 19px;
+    line-height: 1.6;
+    color: var(--ink-soft);
+    max-width: 640px;
+  }
+  .doc-meta {
+    display: flex;
+    gap: 32px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    color: var(--ink-mute);
+  }
+  .doc-meta span strong {
+    display: block;
+    color: var(--ink);
+    font-weight: 500;
+    font-family: 'Inter Tight', sans-serif;
+    font-size: 13px;
+    margin-top: 4px;
+  }
+
+  /* BRAND FOUNDATIONS */
+  .brand-foundations {
+    background: var(--bg-paper-warm);
+    padding: 80px 40px;
+  }
+  .brand-foundations-inner {
+    max-width: 1120px;
+    margin: 0 auto;
+  }
+  .section-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink-mute);
+    margin-bottom: 16px;
+  }
+  .section-h {
+    font-family: 'Fraunces', serif;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    margin-bottom: 48px;
+    max-width: 720px;
+  }
+  .foundations-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1px;
+    background: var(--line);
+  }
+  .foundation-card {
+    background: var(--bg-paper-warm);
+    padding: 32px;
+  }
+  .foundation-card .num {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--purple);
+    margin-bottom: 12px;
+  }
+  .foundation-card h3 {
+    font-family: 'Fraunces', serif;
+    font-weight: 500;
+    font-size: 22px;
+    margin-bottom: 12px;
+    letter-spacing: -0.01em;
+  }
+  .foundation-card p {
+    color: var(--ink-soft);
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  /* PAGE SEPARATOR */
+  .page-separator {
+    background: var(--bg-ink);
+    color: var(--bg-paper);
+    padding: 60px 40px;
+    border-top: 1px solid var(--line-dark);
+  }
+  .page-separator-inner {
+    max-width: 1120px;
+    margin: 0 auto;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+  .page-separator .num {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    letter-spacing: 0.2em;
+    color: var(--purple-soft);
+  }
+  .page-separator h2 {
+    font-family: 'Fraunces', serif;
+    font-weight: 400;
+    font-size: 44px;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+  }
+  .page-separator .url {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    color: var(--purple-soft);
+  }
+
+  /* MOCKUP FRAME */
+  .mockup-wrap {
+    padding: 40px;
+    background: var(--bg-paper-warm);
+  }
+  .mockup-frame {
+    max-width: 1280px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 24px 80px -20px rgba(14, 11, 26, 0.18), 0 0 0 1px var(--line);
+  }
+  .browser-bar {
+    background: #F4F1EA;
+    border-bottom: 1px solid var(--line);
+    padding: 12px 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .browser-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #DDD8CC;
+  }
+  .browser-url {
+    flex: 1;
+    background: white;
+    border-radius: 6px;
+    padding: 6px 14px;
+    margin-left: 12px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--ink-mute);
+    border: 1px solid var(--line);
+  }
+
+  /* SITE NAV */
+  .site-nav {
+    padding: 20px 48px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--line);
+    background: white;
+  }
+  .logo {
+    font-family: 'Fraunces', serif;
+    font-weight: 500;
+    font-size: 22px;
+    letter-spacing: -0.02em;
+    color: var(--ink);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .logo-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--purple);
+  }
+  .nav-links {
+    display: flex;
+    gap: 32px;
+    list-style: none;
+    font-size: 14px;
+    color: var(--ink-soft);
+  }
+  .nav-links a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--ink); }
+  .nav-cta {
+    background: var(--ink);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    font-family: inherit;
+  }
+
+  /* HOMEPAGE HERO */
+  .hp-hero {
+    background: var(--bg-ink);
+    color: var(--bg-paper);
+    padding: 100px 48px 100px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hp-hero::before {
+    content: '';
+    position: absolute;
+    top: -200px;
+    right: -200px;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(107, 79, 232, 0.25), transparent 60%);
+    pointer-events: none;
+  }
+  .hp-hero-inner {
+    position: relative;
+    z-index: 1;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  .hp-hero h1 {
+    font-family: 'Fraunces', serif;
+    font-weight: 300;
+    font-size: 76px;
+    line-height: 1;
+    letter-spacing: -0.035em;
+    margin-bottom: 36px;
+    max-width: 980px;
+  }
+  .hp-hero h1 em {
+    font-style: italic;
+    font-weight: 400;
+    color: var(--purple-soft);
+  }
+  .hp-hero-sub {
+    font-size: 21px;
+    line-height: 1.55;
+    color: rgba(250, 250, 247, 0.72);
+    max-width: 700px;
+    margin-bottom: 48px;
+  }
+  .hp-hero-ctas {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    margin-bottom: 80px;
+  }
+  .btn-primary {
+    background: var(--bg-paper);
+    color: var(--ink);
+    border: none;
+    padding: 14px 24px;
+    border-radius: 999px;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    font-family: inherit;
+    transition: transform 0.2s;
+  }
+  .btn-primary:hover { transform: translateY(-1px); }
+  .btn-ghost {
+    background: transparent;
+    color: var(--bg-paper);
+    border: 1px solid rgba(250, 250, 247, 0.2);
+    padding: 14px 24px;
+    border-radius: 999px;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    font-family: inherit;
+  }
+
+  /* surfaces visual */
+  .surfaces {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 12px;
+    padding-top: 32px;
+    border-top: 1px solid rgba(250, 250, 247, 0.08);
+  }
+  .surface {
+    background: rgba(250, 250, 247, 0.04);
+    border: 1px solid rgba(250, 250, 247, 0.08);
+    border-radius: 12px;
+    padding: 18px;
+    transition: all 0.3s;
+    position: relative;
+  }
+  .surface:hover {
+    background: rgba(107, 79, 232, 0.08);
+    border-color: rgba(184, 168, 255, 0.3);
+  }
+  .surface-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    background: rgba(250, 250, 247, 0.08);
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Fraunces', serif;
+    font-weight: 600;
+    font-size: 14px;
+    color: var(--bg-paper);
+  }
+  .surface-name {
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 4px;
+  }
+  .surface-tag {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    color: var(--purple-soft);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  /* LOGO STRIP */
+  .logo-strip {
+    padding: 48px;
+    background: white;
+    border-bottom: 1px solid var(--line);
+  }
+  .logo-strip-label {
+    text-align: center;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-mute);
+    margin-bottom: 32px;
+  }
+  .logo-row {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  .client-logo {
+    font-family: 'Fraunces', serif;
+    font-size: 18px;
+    color: var(--ink-mute);
+    font-weight: 500;
+    opacity: 0.7;
+  }
+
+  /* CASE STUDIES */
+  .case-section {
+    padding: 100px 48px;
+    background: var(--bg-paper-warm);
+  }
+  .case-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .case-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 56px;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+  .case-header h2 {
+    font-family: 'Fraunces', serif;
+    font-weight: 300;
+    font-size: 48px;
+    line-height: 1.05;
+    letter-spacing: -0.025em;
+    max-width: 640px;
+  }
+  .case-header h2 em {
+    font-style: italic;
+    color: var(--purple);
+  }
+  .case-header-side {
+    font-size: 15px;
+    color: var(--ink-soft);
+    max-width: 320px;
+  }
+  .case-grid {
+    display: grid;
+    grid-template-columns: 1.6fr 1fr;
+    gap: 24px;
+  }
+  .case-card {
+    background: white;
+    border-radius: 16px;
+    padding: 36px;
+    border: 1px solid var(--line);
+    position: relative;
+    overflow: hidden;
+  }
+  .case-card.featured {
+    background: var(--bg-ink);
+    color: var(--bg-paper);
+    border-color: transparent;
+  }
+  .case-card .case-meta {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 24px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+  .case-card.featured .case-meta { color: var(--purple-soft); }
+  .case-card:not(.featured) .case-meta { color: var(--purple); }
+  .case-card .case-meta .dot {
+    width: 4px;
+    height: 4px;
+    background: currentColor;
+    border-radius: 50%;
+    align-self: center;
+    opacity: 0.4;
+  }
+  .case-card h3 {
+    font-family: 'Fraunces', serif;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 1.2;
+    letter-spacing: -0.015em;
+    margin-bottom: 20px;
+  }
+  .case-card.featured h3 { font-size: 36px; max-width: 90%; }
+  .case-card p {
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 32px;
+  }
+  .case-card:not(.featured) p { color: var(--ink-soft); }
+  .case-card.featured p { color: rgba(250, 250, 247, 0.7); }
+  .metric-row {
+    display: flex;
+    gap: 32px;
+    padding-top: 24px;
+    border-top: 1px solid var(--line);
+  }
+  .case-card.featured .metric-row {
+    border-top-color: rgba(250, 250, 247, 0.12);
+  }
+  .metric { flex: 1; }
+  .metric-value {
+    font-family: 'Fraunces', serif;
+    font-weight: 400;
+    font-size: 36px;
+    letter-spacing: -0.02em;
+    line-height: 1;
+    margin-bottom: 6px;
+  }
+  .case-card.featured .metric-value { color: var(--purple-soft); }
+  .metric-label {
+    font-size: 12px;
+    color: var(--ink-mute);
+  }
+  .case-card.featured .metric-label { color: rgba(250, 250, 247, 0.5); }
+  .case-side-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  .case-card.small { padding: 28px; }
+  .case-card.small h3 { font-size: 19px; margin-bottom: 12px; }
+  .case-card.small p { font-size: 13px; margin-bottom: 16px; }
+  .case-card.small .metric-value { font-size: 26px; }
+  .case-card.small .metric-row { padding-top: 16px; gap: 20px; }
+
+  /* PLAYBOOK BLOCK */
+  .playbook {
+    padding: 120px 48px;
+    background: white;
+  }
+  .playbook-inner {
+    max-width: 980px;
+    margin: 0 auto;
+  }
+  .playbook .pre {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--purple);
+    margin-bottom: 24px;
+  }
+  .playbook h2 {
+    font-family: 'Fraunces', serif;
+    font-weight: 300;
+    font-size: 56px;
+    line-height: 1.05;
+    letter-spacing: -0.025em;
+    margin-bottom: 40px;
+  }
+  .playbook h2 em {
+    font-style: italic;
+    color: var(--purple);
+  }
+  .playbook-body {
+    font-size: 19px;
+    line-height: 1.65;
+    color: var(--ink-soft);
+    max-width: 760px;
+  }
+  .playbook-body p + p { margin-top: 20px; }
+  .playbook-body strong {
+    color: var(--ink);
+    font-weight: 500;
+  }
+  .playbook-pull {
+    border-left: 2px solid var(--purple);
+    padding: 4px 0 4px 24px;
+    margin: 40px 0;
+    font-family: 'Fraunces', serif;
+    font-size: 26px;
+    line-height: 1.35;
+    color: var(--ink);
+    font-weight: 400;
+    letter-spacing: -0.01em;
+    max-width: 720px;
+  }
+  .playbook-pull em { font-style: italic; }
+
+  /* PILLARS */
+  .pillars {
+    padding: 100px 48px;
+    background: var(--bg-paper-warm);
+  }
+  .pillars-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .pillars-header {
+    margin-bottom: 64px;
+    max-width: 720px;
+  }
+  .pillars-header h2 {
+    font-family: 'Fraunces', serif;
+    font-weight: 300;
+    font-size: 48px;
+    line-height: 1.05;
+    letter-spacing: -0.025em;
+    margin-bottom: 16px;
+  }
+  .pillars-grid {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 24px;
+  }
+  .pillar {
+    background: white;
+    border-radius: 16px;
+    padding: 40px;
+    border: 1px solid var(--line);
+    position: relative;
+  }
+  .pillar.primary {
+    background: var(--bg-ink);
+    color: var(--bg-paper);
+    border-color: transparent;
+  }
+  .pillar .pillar-num {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.16em;
+    color: var(--purple);
+    margin-bottom: 24px;
+  }
+  .pillar.primary .pillar-num { color: var(--purple-soft); }
+  .pillar h3 {
+    font-family: 'Fraunces', serif;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 1.15;
+    letter-spacing: -0.015em;
+    margin-bottom: 20px;
+  }
+  .pillar.primary h3 { font-size: 40px; }
+  .pillar > p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 28px;
+  }
+  .pillar:not(.primary) > p { color: var(--ink-soft); }
+  .pillar.primary > p { color: rgba(250, 250, 247, 0.75); }
+  .pillar-list {
+    list-style: none;
+    margin-bottom: 32px;
+  }
+  .pillar-list li {
+    padding: 12px 0;
+    border-top: 1px solid var(--line);
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .pillar.primary .pillar-list li {
+    border-top-color: rgba(250, 250, 247, 0.1);
+  }
+  .pillar-list .tag {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.08em;
+    color: var(--ink-mute);
+    text-transform: uppercase;
+  }
+  .pillar.primary .pillar-list .tag { color: rgba(184, 168, 255, 0.7); }
+  .pillar-link {
+    font-size: 14px;
+    color: inherit;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    border-bottom: 1px solid currentColor;
+    padding-bottom: 4px;
+  }
+
+  /* FIELD NOTES */
+  .lab {
+    padding: 100px 48px;
+    background: white;
+  }
+  .lab-inner { max-width: 1200px; margin: 0 auto; }
+  .lab-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 48px;
+    gap: 40px;
+  }
+  .lab-header h2 {
+    font-family: 'Fraunces', serif;
+    font-weight: 300;
+    font-size: 44px;
+    line-height: 1.1;
+    letter-spacing: -0.025em;
+    max-width: 560px;
+  }
+  .lab-header h2 em { font-style: italic; color: var(--purple); }
+  .lab-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: var(--line);
+  }
+  .lab-card {
+    background: white;
+    padding: 32px 28px;
+    transition: background 0.2s;
+    cursor: pointer;
+  }
+  .lab-card:hover { background: var(--bg-paper-warm); }
+  .lab-meta {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    color: var(--purple);
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+  .lab-card h3 {
+    font-family: 'Fraunces', serif;
+    font-weight: 500;
+    font-size: 21px;
+    line-height: 1.25;
+    letter-spacing: -0.01em;
+    margin-bottom: 16px;
+    min-height: 78px;
+  }
+  .lab-card p {
+    font-size: 13px;
+    color: var(--ink-mute);
+  }
+
+  /* CTA FOOTER */
+  .cta-foot {
+    background: var(--bg-ink);
+    color: var(--bg-paper);
+    padding: 100px 48px;
+  }
+  .cta-foot-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 80px;
+    align-items: center;
+  }
+  .cta-foot h2 {
+    font-family: 'Fraunces', serif;
+    font-weight: 300;
+    font-size: 56px;
+    line-height: 1;
+    letter-spacing: -0.03em;
+  }
+  .cta-foot h2 em { font-style: italic; color: var(--purple-soft); }
+  .cta-foot-side p {
+    font-size: 15px;
+    line-height: 1.6;
+    color: rgba(250, 250, 247, 0.7);
+    margin-bottom: 24px;
+  }
+  .cta-buttons { display: flex; gap: 12px; flex-direction: column; }
+  .cta-buttons .btn-primary, .cta-buttons .btn-ghost { width: fit-content; }
+
+  /* ORGANIC SEARCH PAGE */
+  .os-hero {
+    padding: 80px 48px 60px;
+    background: white;
+    border-bottom: 1px solid var(--line);
+  }
+  .os-hero-inner { max-width: 1100px; margin: 0 auto; }
+  .os-pre {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--purple);
+    margin-bottom: 24px;
+  }
+  .os-hero h1 {
+    font-family: 'Fraunces', serif;
+    font-weight: 300;
+    font-size: 68px;
+    line-height: 1.02;
+    letter-spacing: -0.03em;
+    margin-bottom: 32px;
+    max-width: 880px;
+  }
+  .os-hero h1 em { font-style: italic; color: var(--purple); }
+  .os-hero-sub {
+    font-size: 20px;
+    line-height: 1.55;
+    color: var(--ink-soft);
+    max-width: 700px;
+  }
+
+  /* POSITIVE FRAME BLOCK (replaces opinion) */
+  .frame-block {
+    padding: 80px 48px;
+    background: var(--bg-paper-warm);
+  }
+  .frame-inner {
+    max-width: 980px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1.6fr;
+    gap: 56px;
+    align-items: start;
+  }
+  .frame-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--purple);
+    padding-top: 8px;
+  }
+  .frame-body h2 {
+    font-family: 'Fraunces', serif;
+    font-weight: 400;
+    font-size: 38px;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    margin-bottom: 24px;
+  }
+  .frame-body h2 em { font-style: italic; color: var(--purple); }
+  .frame-body p {
+    font-size: 17px;
+    line-height: 1.65;
+    color: var(--ink-soft);
+    margin-bottom: 16px;
+  }
+  .frame-body strong { color: var(--ink); font-weight: 500; }
+
+  /* CHANNEL SPLIT */
+  .channel-split {
+    padding: 80px 48px;
+    background: white;
+  }
+  .channel-split-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .channel {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    gap: 64px;
+    padding: 56px 0;
+    border-bottom: 1px solid var(--line);
+  }
+  .channel:last-of-type { border-bottom: none; }
+  .channel-num {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    letter-spacing: 0.16em;
+    color: var(--purple);
+    margin-bottom: 16px;
+  }
+  .channel-label {
+    font-family: 'Fraunces', serif;
+    font-size: 14px;
+    color: var(--ink-mute);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  .channel-name {
+    font-family: 'Fraunces', serif;
+    font-weight: 400;
+    font-size: 56px;
+    line-height: 1;
+    letter-spacing: -0.03em;
+    color: var(--ink);
+  }
+  .channel-content h3 {
+    font-family: 'Fraunces', serif;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 1.2;
+    letter-spacing: -0.015em;
+    margin-bottom: 20px;
+    color: var(--ink);
+  }
+  .channel-content > p {
+    font-size: 17px;
+    line-height: 1.6;
+    color: var(--ink-soft);
+    margin-bottom: 32px;
+    max-width: 640px;
+  }
+  .channel-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px 32px;
+    list-style: none;
+  }
+  .channel-list li {
+    font-size: 14px;
+    padding: 12px 0;
+    border-top: 1px solid var(--line);
+    display: flex;
+    gap: 12px;
+    align-items: baseline;
+    color: var(--ink-soft);
+  }
+  .channel-list li::before {
+    content: '';
+    width: 4px;
+    height: 4px;
+    background: var(--purple);
+    border-radius: 50%;
+    flex-shrink: 0;
+    transform: translateY(-2px);
+  }
+
+  /* INTEGRATION */
+  .integration {
+    padding: 100px 48px;
+    background: var(--bg-ink);
+    color: var(--bg-paper);
+  }
+  .integration-inner {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .integration-pre {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--purple-soft);
+    margin-bottom: 24px;
+  }
+  .integration h2 {
+    font-family: 'Fraunces', serif;
+    font-weight: 300;
+    font-size: 52px;
+    line-height: 1.08;
+    letter-spacing: -0.025em;
+    margin-bottom: 32px;
+    max-width: 880px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .integration h2 em { font-style: italic; color: var(--purple-soft); }
+  .integration p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: rgba(250, 250, 247, 0.72);
+    max-width: 660px;
+    margin: 0 auto;
+  }
+
+  /* WEB PAGE */
+  .web-hero {
+    padding: 80px 48px;
+    background: white;
+    border-bottom: 1px solid var(--line);
+  }
+  .web-hero-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+    align-items: center;
+  }
+  .web-hero-left .pre {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--purple);
+    margin-bottom: 20px;
+  }
+  .web-hero-left h1 {
+    font-family: 'Fraunces', serif;
+    font-weight: 300;
+    font-size: 56px;
+    line-height: 1.02;
+    letter-spacing: -0.03em;
+    margin-bottom: 24px;
+  }
+  .web-hero-left h1 em { font-style: italic; color: var(--purple); }
+  .web-hero-left p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: var(--ink-soft);
+  }
+  .web-visual {
+    aspect-ratio: 4 / 3;
+    background: var(--bg-paper-warm);
+    border-radius: 12px;
+    border: 1px solid var(--line);
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .web-visual-bars {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .web-visual-bar {
+    height: 8px;
+    background: var(--line);
+    border-radius: 4px;
+    position: relative;
+  }
+  .web-visual-bar::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 0; bottom: 0;
+    background: var(--purple);
+    border-radius: 4px;
+  }
+  .web-visual-bar.b1::before { width: 95%; }
+  .web-visual-bar.b2::before { width: 80%; }
+  .web-visual-bar.b3::before { width: 60%; }
+  .web-visual-meta {
+    display: flex;
+    justify-content: space-between;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--ink-mute);
+  }
+  .web-visual-meta strong { color: var(--purple); font-weight: 500; }
+
+  /* CAPABILITIES */
+  .capabilities {
+    padding: 80px 48px;
+    background: var(--bg-paper-warm);
+  }
+  .capabilities-inner { max-width: 1100px; margin: 0 auto; }
+  .capabilities-header {
+    margin-bottom: 56px;
+    max-width: 720px;
+  }
+  .capabilities-header h2 {
+    font-family: 'Fraunces', serif;
+    font-weight: 300;
+    font-size: 40px;
+    line-height: 1.1;
+    letter-spacing: -0.025em;
+    margin-bottom: 16px;
+  }
+  .capabilities-header p {
+    font-size: 16px;
+    color: var(--ink-soft);
+    line-height: 1.6;
+  }
+  .cap-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: var(--line);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    overflow: hidden;
+  }
+  .cap-card {
+    background: white;
+    padding: 32px 28px;
+  }
+  .cap-num {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.16em;
+    color: var(--purple);
+    margin-bottom: 16px;
+  }
+  .cap-card h3 {
+    font-family: 'Fraunces', serif;
+    font-weight: 500;
+    font-size: 19px;
+    margin-bottom: 12px;
+    letter-spacing: -0.01em;
+  }
+  .cap-card p {
+    font-size: 14px;
+    color: var(--ink-soft);
+    line-height: 1.55;
+  }
+
+  /* END NOTES */
+  .end-notes {
+    padding: 80px 40px;
+    background: var(--bg-paper);
+    border-top: 1px solid var(--line);
+  }
+  .end-notes-inner {
+    max-width: 880px;
+    margin: 0 auto;
+  }
+  .end-notes h2 {
+    font-family: 'Fraunces', serif;
+    font-weight: 400;
+    font-size: 32px;
+    margin-bottom: 32px;
+    letter-spacing: -0.02em;
+  }
+  .end-notes ol {
+    padding-left: 20px;
+    color: var(--ink-soft);
+  }
+  .end-notes li {
+    margin-bottom: 12px;
+    font-size: 15px;
+    line-height: 1.6;
+  }
+  .end-notes li strong { color: var(--ink); }
+
+  @media (max-width: 900px) {
+    .hp-hero h1 { font-size: 48px; }
+    .surfaces { grid-template-columns: repeat(2, 1fr); }
+    .case-grid, .pillars-grid, .lab-grid, .cta-foot-inner, .frame-inner, .web-hero-inner { grid-template-columns: 1fr; }
+    .lab-grid { grid-template-columns: 1fr; }
+    .channel { grid-template-columns: 1fr; gap: 24px; }
+    .cap-grid { grid-template-columns: 1fr; }
+    .foundations-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- DOC INTRO -->
+<section class="doc-intro">
+  <div class="eyebrow">Brand and site doc · v3 · May 28, 2026</div>
+  <h1>Freshboost,<br>finally <em>sounding like itself.</em></h1>
+  <p class="lede">Final copy and visual direction for the three core pages: home, organic search, and web. Built on Freshboost's existing purple identity, sharpened for a B2B founder audience, and written the way you'd actually talk about the work on a call.</p>
+  <div class="doc-meta">
+    <span>Audience<strong>Founders and heads of growth</strong></span>
+    <span>ICP<strong>B2B SaaS, AI, tech services</strong></span>
+    <span>Voice<strong>Plain, confident, conversational</strong></span>
+    <span>Status<strong>Final copy direction, ready to design</strong></span>
+  </div>
+</section>
+
+<!-- FOUNDATIONS -->
+<section class="brand-foundations">
+  <div class="brand-foundations-inner">
+    <div class="section-label">Foundations</div>
+    <h2 class="section-h">Four things that hold every page together.</h2>
+    <div class="foundations-grid">
+      <div class="foundation-card">
+        <div class="num">01 · POSITIONING</div>
+        <h3>Organic search, built for how buyers search now.</h3>
+        <p>Buyers don't just Google. They ask ChatGPT, Perplexity, Gemini, and Claude. Freshboost runs SEO and GEO together so brands get found across all of them.</p>
+      </div>
+      <div class="foundation-card">
+        <div class="num">02 · CORE BELIEF</div>
+        <h3>SEO and GEO need different specialists, working in sync.</h3>
+        <p>LLMs cite content that already ranks well. Strong SEO makes GEO possible. We staff each engagement with dedicated SEO and GEO experts, with a strategist matching the right people to each problem.</p>
+      </div>
+      <div class="foundation-card">
+        <div class="num">03 · WHAT WE SELL</div>
+        <h3>Organic Search is the hero. Web is a separate practice.</h3>
+        <p>SEO and GEO are run as one offer by specialist teams. Web is a separate practice with its own experts, available for clients who need it. Each stands on its own.</p>
+      </div>
+      <div class="foundation-card">
+        <div class="num">04 · HOW IT SOUNDS</div>
+        <h3>Conversational. Specific. Never selling.</h3>
+        <p>Five years in the market is the credential. Real client names, real numbers, real opinions about what's working. No hype, no "premier digital partner" copy, no shots at other agencies.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PAGE 1: HOMEPAGE ============== -->
+<section class="page-separator">
+  <div class="page-separator-inner">
+    <div>
+      <div class="num">PAGE 01 OF 03</div>
+      <h2>Homepage</h2>
+    </div>
+    <div class="url">freshboost.co/</div>
+  </div>
+</section>
+
+<div class="mockup-wrap">
+  <div class="mockup-frame">
+    <div class="browser-bar">
+      <div class="browser-dot"></div>
+      <div class="browser-dot"></div>
+      <div class="browser-dot"></div>
+      <div class="browser-url">freshboost.co</div>
+    </div>
+
+    <nav class="site-nav">
+      <div class="logo"><div class="logo-dot"></div>Freshboost</div>
+      <ul class="nav-links">
+        <li><a href="#">Organic Search</a></li>
+        <li><a href="#">Web</a></li>
+        <li><a href="#">Work</a></li>
+        <li><a href="#">Field notes</a></li>
+        <li><a href="#">About</a></li>
+      </ul>
+      <button class="nav-cta">Talk to us</button>
+    </nav>
+
+    <!-- HERO (LOCKED) -->
+    <section class="hp-hero">
+      <div class="hp-hero-inner">
+        <h1>The team behind every brand <em>mention</em> that matters.</h1>
+        <p class="hp-hero-sub">Your buyers don't just Google anymore. They ask ChatGPT, Perplexity, Gemini, and Claude. We make sure your brand shows up in those conversations, and ranks on Google while it's at it.</p>
+        <div class="hp-hero-ctas">
+          <button class="btn-primary">See the work</button>
+          <button class="btn-ghost">Free GEO audit</button>
+        </div>
+
+        <div class="surfaces">
+          <div class="surface">
+            <div class="surface-icon">G</div>
+            <div class="surface-name">Google</div>
+            <div class="surface-tag">SEO</div>
+          </div>
+          <div class="surface">
+            <div class="surface-icon">C</div>
+            <div class="surface-name">ChatGPT</div>
+            <div class="surface-tag">GEO</div>
+          </div>
+          <div class="surface">
+            <div class="surface-icon">P</div>
+            <div class="surface-name">Perplexity</div>
+            <div class="surface-tag">GEO</div>
+          </div>
+          <div class="surface">
+            <div class="surface-icon">G</div>
+            <div class="surface-name">Gemini</div>
+            <div class="surface-tag">GEO</div>
+          </div>
+          <div class="surface">
+            <div class="surface-icon">C</div>
+            <div class="surface-name">Claude</div>
+            <div class="surface-tag">GEO</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LOGO STRIP -->
+    <section class="logo-strip">
+      <div class="logo-strip-label">Five years of work for teams like</div>
+      <div class="logo-row">
+        <div class="client-logo">Luma AI</div>
+        <div class="client-logo">Opsera</div>
+        <div class="client-logo">AptEdge</div>
+        <div class="client-logo">Gallabox</div>
+        <div class="client-logo">MachEye</div>
+        <div class="client-logo">Protecto</div>
+        <div class="client-logo">ValueCore</div>
+      </div>
+    </section>
+
+    <!-- CASE STUDIES -->
+    <section class="case-section">
+      <div class="case-inner">
+        <div class="case-header">
+          <h2>We let our <em>results speak.</em></h2>
+          <div class="case-header-side">Real clients, real numbers. Anonymised where we had to.</div>
+        </div>
+        <div class="case-grid">
+          <article class="case-card featured">
+            <div class="case-meta">
+              <span>CYBERSECURITY</span><span class="dot"></span><span>PROGRAMMATIC SEO</span><span class="dot"></span><span>6 MONTHS</span>
+            </div>
+            <h3>How a cybersecurity firm doubled domain authority without writing a single blog post.</h3>
+            <p>The client already had a database of vulnerability data. We turned it into a programmatic SEO play, built thousands of structured pages, and let government and enterprise sites link in. Authority compounded on data they already owned.</p>
+            <div class="metric-row">
+              <div class="metric">
+                <div class="metric-value">2×</div>
+                <div class="metric-label">Domain authority in 6 months</div>
+              </div>
+              <div class="metric">
+                <div class="metric-value">.gov</div>
+                <div class="metric-label">Government grade backlinks</div>
+              </div>
+              <div class="metric">
+                <div class="metric-value">0</div>
+                <div class="metric-label">New blogs written</div>
+              </div>
+            </div>
+          </article>
+
+          <div class="case-side-stack">
+            <article class="case-card small">
+              <div class="case-meta">
+                <span>MARKET INTEL</span><span class="dot"></span><span>CONTENT PRUNING</span>
+              </div>
+              <h3>3× the leads, without writing anything new.</h3>
+              <p>We pruned the site and restructured the user flow around buyer intent, not keyword volume. Same content footprint, three times the qualified leads.</p>
+              <div class="metric-row">
+                <div class="metric">
+                  <div class="metric-value">3×</div>
+                  <div class="metric-label">Qualified leads</div>
+                </div>
+                <div class="metric">
+                  <div class="metric-value">0</div>
+                  <div class="metric-label">New articles</div>
+                </div>
+              </div>
+            </article>
+
+            <article class="case-card small">
+              <div class="case-meta">
+                <span>AI / GENERATIVE</span><span class="dot"></span><span>GEO</span>
+              </div>
+              <h3>Buffer text. Real Luma AI case study goes here.</h3>
+              <p>Placeholder copy. Write the actual story focused on how we made the brand show up inside ChatGPT and Perplexity responses for category-defining prompts.</p>
+              <div class="metric-row">
+                <div class="metric">
+                  <div class="metric-value">[X]</div>
+                  <div class="metric-label">AI citations</div>
+                </div>
+                <div class="metric">
+                  <div class="metric-value">[X]</div>
+                  <div class="metric-label">AI sourced sessions</div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PLAYBOOK (REWRITTEN) -->
+    <section class="playbook">
+      <div class="playbook-inner">
+        <div class="pre">How the game has changed</div>
+        <h2>Two things now matter at the same time. <em>Ranking and getting mentioned.</em></h2>
+        <div class="playbook-body">
+          <p>Three years ago, ranking on Google was the whole job. Today, a real chunk of your buyers will ask ChatGPT or Perplexity first, read what comes back, and form an opinion before they ever land on your site. <strong>Showing up in those mentions is now part of the work.</strong></p>
+          <div class="playbook-pull">"Ranking gets you found. Brand mentions get you trusted. Both need real specialists, not generalists splitting their attention."</div>
+          <p>Strong SEO is what makes brand mentions possible in the first place. LLMs reach for sources with real authority, clean structure, and signals they can trust. So we run dedicated SEO and GEO teams, with a strategist assigning the right experts to each problem. You get specialists on both sides of the work, not a single team trying to be good at everything.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PILLARS -->
+    <section class="pillars">
+      <div class="pillars-inner">
+        <div class="pillars-header">
+          <div class="section-label">What we do</div>
+          <h2>Two practices. Both done right.</h2>
+        </div>
+        <div class="pillars-grid">
+          <div class="pillar primary">
+            <div class="pillar-num">01 · THE OFFER</div>
+            <h3>Organic Search.</h3>
+            <p>SEO and GEO, run by dedicated specialist teams. A strategist assigns the right experts to your problem, so the work that gets you ranked and the work that gets you mentioned both get full focus.</p>
+            <ul class="pillar-list">
+              <li>Topical authority and entity work <span class="tag">SEO + GEO</span></li>
+              <li>Schema, citation, llms.txt setup <span class="tag">GEO</span></li>
+              <li>Programmatic SEO at scale <span class="tag">SEO</span></li>
+              <li>AI brand mention tracking <span class="tag">GEO</span></li>
+              <li>Buyer intent keyword strategy <span class="tag">SEO</span></li>
+              <li>Content audits and pruning <span class="tag">SEO</span></li>
+            </ul>
+            <a href="#" class="pillar-link">More on Organic Search</a>
+          </div>
+          <div class="pillar">
+            <div class="pillar-num">02 · A SEPARATE PRACTICE</div>
+            <h3>Web.</h3>
+            <p>Your website is the first product your buyers ever use. Our Webflow specialists design, build, and optimise sites that look sharp and perform under load. Hundreds of Webflow projects shipped.</p>
+            <ul class="pillar-list">
+              <li>Custom Webflow design and development <span class="tag">WEBFLOW</span></li>
+              <li>Migrations from WP, Wix, Squarespace, Dorik <span class="tag">MIGRATIONS</span></li>
+              <li>White-label web design for agencies <span class="tag">WHITE LABEL</span></li>
+              <li>Performance, security, ongoing maintenance <span class="tag">SUPPORT</span></li>
+            </ul>
+            <a href="#" class="pillar-link">More on Web</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FIELD NOTES -->
+    <section class="lab">
+      <div class="lab-inner">
+        <div class="lab-header">
+          <h2><em>Field notes.</em></h2>
+          <a href="#" class="pillar-link" style="color: var(--ink);">All notes</a>
+        </div>
+        <div class="lab-grid">
+          <div class="lab-card">
+            <div class="lab-meta">CASE STUDY · MAY 2026</div>
+            <h3>How AI search engines decide which websites to cite.</h3>
+            <p>4 min read</p>
+          </div>
+          <div class="lab-card">
+            <div class="lab-meta">EXPERIMENT · APR 2026</div>
+            <h3>Ranking a new SaaS site with zero backlinks. What worked, what wasted three months.</h3>
+            <p>7 min read</p>
+          </div>
+          <div class="lab-card">
+            <div class="lab-meta">PLAYBOOK · APR 2026</div>
+            <h3>AEO, GEO, SEO. What the three acronyms actually mean in 2026.</h3>
+            <p>5 min read</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA FOOTER -->
+    <section class="cta-foot">
+      <div class="cta-foot-inner">
+        <h2>Want to see where your brand <em>shows up?</em></h2>
+        <div class="cta-foot-side">
+          <p>Free GEO audit. We'll check where you rank on Google, where you're getting mentioned across ChatGPT and Perplexity, and the three biggest moves we'd make in your first 90 days.</p>
+          <div class="cta-buttons">
+            <button class="btn-primary">Get the audit</button>
+            <button class="btn-ghost">Or just talk to us</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+
+
+<!-- ============ PAGE 2: ORGANIC SEARCH ================== -->
+<section class="page-separator">
+  <div class="page-separator-inner">
+    <div>
+      <div class="num">PAGE 02 OF 03</div>
+      <h2>Organic Search</h2>
+    </div>
+    <div class="url">freshboost.co/organic-search</div>
+  </div>
+</section>
+
+<div class="mockup-wrap">
+  <div class="mockup-frame">
+    <div class="browser-bar">
+      <div class="browser-dot"></div>
+      <div class="browser-dot"></div>
+      <div class="browser-dot"></div>
+      <div class="browser-url">freshboost.co/organic-search</div>
+    </div>
+
+    <nav class="site-nav">
+      <div class="logo"><div class="logo-dot"></div>Freshboost</div>
+      <ul class="nav-links">
+        <li><a href="#">Organic Search</a></li>
+        <li><a href="#">Web</a></li>
+        <li><a href="#">Work</a></li>
+        <li><a href="#">Field notes</a></li>
+        <li><a href="#">About</a></li>
+      </ul>
+      <button class="nav-cta">Talk to us</button>
+    </nav>
+
+    <!-- OS HERO -->
+    <section class="os-hero">
+      <div class="os-hero-inner">
+        <div class="os-pre">Organic Search</div>
+        <h1>SEO and GEO, each with <em>dedicated experts.</em></h1>
+        <p class="os-hero-sub">SEO gets your brand to the top of Google. GEO gets your brand mentioned inside ChatGPT, Perplexity, Gemini, and Claude. Two distinct disciplines, two specialist teams, one strategist making sure they reinforce each other.</p>
+      </div>
+    </section>
+
+    <!-- POSITIVE FRAME BLOCK (REPLACES THE VILLAIN ONE) -->
+    <section class="frame-block">
+      <div class="frame-inner">
+        <div class="frame-label">How they work together</div>
+        <div class="frame-body">
+          <h2>Strong SEO is what makes brand mentions <em>possible.</em></h2>
+          <p>LLMs don't pull from random sources. They reach for content that ranks well, has clean structure, and shows the kind of authority signals search engines have been rewarding for years.</p>
+          <p>That means the work that helps you rank on Google is also the work that helps you get mentioned by ChatGPT. Topical authority, entity clarity, structured data, internal linking, content depth. <strong>Same foundation, two payoffs.</strong></p>
+          <p>So we don't pick a side. We build the foundation once and let it work for both channels.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CHANNELS -->
+    <section class="channel-split">
+      <div class="channel-split-inner">
+
+        <div class="channel">
+          <div>
+            <div class="channel-num">01</div>
+            <div class="channel-label">The foundation</div>
+            <div class="channel-name">SEO.</div>
+          </div>
+          <div class="channel-content">
+            <h3>The SEO work that earns rankings, and also earns mentions.</h3>
+            <p>Modern SEO is built around entities, topical authority, structural signals, and a healthy backlink profile. We do the foundation work that helps your pages rank on Google and gives LLMs a clear, trustworthy picture of who you are and what you do.</p>
+            <ul class="channel-list">
+              <li>Topical authority mapping</li>
+              <li>Entity and schema optimisation</li>
+              <li>Buyer intent keyword strategy</li>
+              <li>Programmatic SEO at scale</li>
+              <li>Backlink building and digital PR</li>
+              <li>Content audits and pruning</li>
+              <li>Information architecture</li>
+              <li>Technical SEO and Core Web Vitals</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="channel">
+          <div>
+            <div class="channel-num">02</div>
+            <div class="channel-label">The new surface</div>
+            <div class="channel-name">GEO.</div>
+          </div>
+          <div class="channel-content">
+            <h3>The work that gets your brand named inside AI tools.</h3>
+            <p>Generative Engine Optimisation is the practice of making your brand citable and retrievable inside LLMs. We track where you currently get mentioned, find the prompts that drive your category, and build the content and signals that earn those mentions.</p>
+            <ul class="channel-list">
+              <li>AI brand mention tracking</li>
+              <li>llms.txt and retrieval signals</li>
+              <li>Citation engineered content</li>
+              <li>Prompt driven keyword discovery</li>
+              <li>Entity disambiguation</li>
+              <li>Comparison and listicle plays</li>
+              <li>AEO for featured Google answers</li>
+              <li>LLM source set auditing</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- INTEGRATION CLOSER -->
+    <section class="integration">
+      <div class="integration-inner">
+        <div class="integration-pre">How we deliver it</div>
+        <h2>Specialists on both sides. <em>One strategist holding it together.</em></h2>
+        <p>You get a dedicated SEO team and a dedicated GEO team, not generalists splitting their attention. A strategist sits across both, makes sure the content, schema, and link work serves both channels, and owns the single strategy you signed up for. Specialist depth, joined-up thinking.</p>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-foot">
+      <div class="cta-foot-inner">
+        <h2>See where your brand <em>shows up.</em></h2>
+        <div class="cta-foot-side">
+          <p>Free GEO audit. We'll map your Google rankings, your brand mentions across ChatGPT and Perplexity, and the gaps slowing both down.</p>
+          <div class="cta-buttons">
+            <button class="btn-primary">Get the audit</button>
+            <button class="btn-ghost">Or just talk to us</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+
+
+<!-- ============ PAGE 3: WEB =================== -->
+<section class="page-separator">
+  <div class="page-separator-inner">
+    <div>
+      <div class="num">PAGE 03 OF 03</div>
+      <h2>Web</h2>
+    </div>
+    <div class="url">freshboost.co/web</div>
+  </div>
+</section>
+
+<div class="mockup-wrap">
+  <div class="mockup-frame">
+    <div class="browser-bar">
+      <div class="browser-dot"></div>
+      <div class="browser-dot"></div>
+      <div class="browser-dot"></div>
+      <div class="browser-url">freshboost.co/web</div>
+    </div>
+
+    <nav class="site-nav">
+      <div class="logo"><div class="logo-dot"></div>Freshboost</div>
+      <ul class="nav-links">
+        <li><a href="#">Organic Search</a></li>
+        <li><a href="#">Web</a></li>
+        <li><a href="#">Work</a></li>
+        <li><a href="#">Field notes</a></li>
+        <li><a href="#">About</a></li>
+      </ul>
+      <button class="nav-cta">Talk to us</button>
+    </nav>
+
+    <!-- WEB HERO -->
+    <section class="web-hero">
+      <div class="web-hero-inner">
+        <div class="web-hero-left">
+          <div class="pre">Web</div>
+          <h1>Your website is the <em>first product</em> your buyers ever use.</h1>
+          <p>Our Webflow specialists design, build, and ship sites that look sharp, load fast, and perform under load. Hundreds of projects delivered. Same standard, every build.</p>
+        </div>
+        <div class="web-visual">
+          <div>
+            <div class="web-visual-meta" style="margin-bottom: 16px;">
+              <span>Today</span>
+              <span>After</span>
+            </div>
+            <div class="web-visual-bars">
+              <div class="web-visual-bar b3"></div>
+              <div class="web-visual-bar b2"></div>
+              <div class="web-visual-bar b1"></div>
+            </div>
+          </div>
+          <div class="web-visual-meta">
+            <span>Speed, polish, conversion</span>
+            <span><strong>Built right</strong></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CAPABILITIES -->
+    <section class="capabilities">
+      <div class="capabilities-inner">
+        <div class="capabilities-header">
+          <h2>What we build.</h2>
+          <p>Webflow specialists, four service lines, and a delivery process that ships consistent, high-quality work every day. Whether you're starting fresh, migrating off a legacy platform, or scaling a white-label operation, we've done it before.</p>
+        </div>
+        <div class="cap-grid">
+          <div class="cap-card">
+            <div class="cap-num">01</div>
+            <h3>Custom Webflow builds</h3>
+            <p>Bespoke design and development for B2B brands. Pixel-perfect UI, advanced interactions, custom code where you need it. Tailored to your business, not a template you'll outgrow.</p>
+          </div>
+          <div class="cap-card">
+            <div class="cap-num">02</div>
+            <h3>Platform migrations</h3>
+            <p>WordPress, Wix, Squarespace, Dorik moved to Webflow without losing rankings, redirects, metadata, or backlink equity. Painless migrations, zero data loss.</p>
+          </div>
+          <div class="cap-card">
+            <div class="cap-num">03</div>
+            <h3>White-label web design</h3>
+            <p>An extended team for agencies that need design and dev firepower without the overhead. We do the work, you take the credit. Your clients never see us.</p>
+          </div>
+          <div class="cap-card">
+            <div class="cap-num">04</div>
+            <h3>Performance and security</h3>
+            <p>Core Web Vitals, LCP, CLS, secure web practices for B2B transactions. Sites that load fast and behave the way enterprise buyers expect.</p>
+          </div>
+          <div class="cap-card">
+            <div class="cap-num">05</div>
+            <h3>Ongoing maintenance</h3>
+            <p>Continued updates and support after launch, submitted through our internal console. Your site stays current as Webflow ships features and as your business evolves.</p>
+          </div>
+          <div class="cap-card">
+            <div class="cap-num">06</div>
+            <h3>WordPress when it fits</h3>
+            <p>When Webflow isn't the right tool, we ship clean, fast, SEO-ready WordPress builds. Right tool for the job, every time.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-foot">
+      <div class="cta-foot-inner">
+        <h2>Is your site holding back your <em>growth?</em></h2>
+        <div class="cta-foot-side">
+          <p>Tell us where you are. Current platform, what's not working, what you're trying to ship next. We'll give you a straight answer on whether you need a rebuild, a migration, or just a few smart fixes.</p>
+          <div class="cta-buttons">
+            <button class="btn-primary">Talk to us</button>
+            <button class="btn-ghost">Free technical audit</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+
+<!-- END NOTES -->
+
+</body>
+</html>
